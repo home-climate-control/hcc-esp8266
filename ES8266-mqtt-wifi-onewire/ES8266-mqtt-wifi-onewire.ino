@@ -157,17 +157,17 @@ void loop_onewire() {
       // MQTT message will go to ${mqtt_root}/sensor/${address} topic
       // Payload will be formed like this:
       // For now:
-      // {"entityType":"sensor","name":"${address}","signature":"T${address}","signal":${double-value},"deviceId":"${deviceId}"}
+      // {"entity_type":"sensor","name":"${address}","signature":"T${address}","signal":${double-value},"device_id":"${deviceId}"}
       // When NTP is integrated:
-      // {"entityType":"sensor","timestamp":${millis},"name":"${address}","signature":"T${address}","signal":${double-value},"deviceId":"${deviceId}"}
+      // {"entity_type":"sensor","timestamp":${millis},"name":"${address}","signature":"T${address}","signal":${double-value},"device_id":"${deviceId}"}
 
-      String payload = "{\"entityType\":\"sensor\",\"name\":\"";
+      String payload = "{\"entity_type\":\"sensor\",\"name\":\"";
       payload += address;
       payload += "\",\"signature\":\"T";
       payload += address;
       payload += "\",\"signal\":";
       payload += tempC;
-      payload += ",\"deviceId\":\"";
+      payload += ",\"device_id\":\"";
       payload += deviceId;
       payload += "\"}";
 
