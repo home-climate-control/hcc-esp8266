@@ -21,4 +21,5 @@ The following hardware is already on the bench, waiting to be provided support f
 
 # What's next?
 
-You might want to explore the [Home Climate Control](https://github.com/home-climate-control/dz) project, for which these edge devices were intended in the first place.
+* You might want to explore the [Home Climate Control](https://github.com/home-climate-control/dz) project, for which these edge devices were intended in the first place.
+* Stay tuned: [hcc-esp32](https://github.com/home-climate-control/hcc-esp32) is coming.
