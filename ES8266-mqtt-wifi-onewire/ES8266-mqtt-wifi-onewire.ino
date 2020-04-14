@@ -259,8 +259,8 @@ void mqttHello()
     topic += "/edge";
 
     // Hello message format is:
-    // {"entityType":"sensor","deviceId":"${deviceId}","sources": ["${1-Wire-A}", ... "${1-Wire-N}"]}
-    String payload = "{\"entityType\":\"sensor\",\"deviceId\":\"";
+    // {"entity_type":"sensor","device_id":"${deviceId}","sources": ["${1-Wire-A}", ... "${1-Wire-N}"]}
+    String payload = "{\"entity_type\":\"sensor\",\"device_id\":\"";
     payload += deviceId;
     payload += "\",\"sources\": [";
 
