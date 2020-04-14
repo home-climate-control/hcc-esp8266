@@ -244,7 +244,8 @@ void loop()
 String getAddress(DeviceAddress deviceAddress)
 {
     String result;
-    for (uint8_t i = 0; i < 8; i++) {
+    // LSB to MSB
+    for (int i = 7; i >= 0; i--) {
         char buf[2];
         sprintf(buf, "%02X", deviceAddress[i]);
         result += String(buf);
