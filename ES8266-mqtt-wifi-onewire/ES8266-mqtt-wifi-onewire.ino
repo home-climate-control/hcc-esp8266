@@ -148,9 +148,20 @@ void setup()
 void loop_onewire()
 {
     // Turn on the LED to indicate 1-Wire operation
+
+    // Having it on for the whole duration can be seen as an eyesore, so let's give it a short blink
+    // at the beginning and short blink at the end so that who needs to see the output, does, but others don't
+
+    // VT FIXME: Replace delay() with non-blocking wait
+
     digitalWrite(BUILTIN_LED, LOW);
+    delay(5);
+    digitalWrite(BUILTIN_LED, HIGH);
+
     sensors.requestTemperatures();
-    // Turn off the LED
+
+    digitalWrite(BUILTIN_LED, LOW);
+    delay(5);
     digitalWrite(BUILTIN_LED, HIGH);
 
     // Loop through each device, print out temperature data
